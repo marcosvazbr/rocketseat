@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+
+.page {
+    width: 1000px;
+    margin: 65px auto 0px;
+}
+
+header {
+    display: flex; /* o flex faz as caixas internas não serem block, fica uma ao lado da outra */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 48px; /* gap funciona com display flex, coloca distancia entre elementos */
+    margin: 0px;
+    padding: 0px;
+}
