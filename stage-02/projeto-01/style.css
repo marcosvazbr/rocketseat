@@ -4,6 +4,7 @@ body {
     font-size: 14px;
     line-height: 28px;
     margin: 0px;
+    font-weight: 400;
 }
 #hero {
     width: 592px;
@@ -34,6 +35,7 @@ p {
     color: #7d7987;
 }
 
+
 #balls {
     position: fixed;
     bottom: 0px;
@@ -41,7 +43,7 @@ p {
 }
 
 #footer {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
 }
 #footer a + a { /* pegue o a que anterior a ele tem um a
     faz o espaço ficar no meio certinho */
