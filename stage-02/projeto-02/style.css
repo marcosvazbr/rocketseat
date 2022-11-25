@@ -34,6 +34,7 @@ ul {
 
 ul li a {
     opacity: 0.5;
+    margin
 }
 
 ul li a:hover { /* pseudo-class */
