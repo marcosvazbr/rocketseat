@@ -1,17 +1,26 @@
 body {
     margin: 0px;
+    
+    font-family: 'Open Sans', sans-serif;
+
+    /* primeiro: qual a rotação 180deg , segundo: qual a cor inicial, terceiro: qual a cor final) */
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82% rgba (277, 255, 038)100%);
+
+    min-height: 100vh; 
 }
 
 .page {
     width: 1000px;
-    margin: 65px auto 0px;
+    margin: 0px auto 0px;
+    padding-top: 65px;
 }
 
-header {
+nav {
     display: flex; /* o flex faz as caixas internas não serem block, fica uma ao lado da outra */
     justify-content: space-between;
     align-items: center;
     margin-bottom: 55px;
+    
 }
 
 ul {
@@ -20,4 +29,81 @@ ul {
     gap: 48px; /* gap funciona com display flex, coloca distancia entre elementos */
     margin: 0px;
     padding: 0px;
+    font-family: 'Mulish', sans-serif;
+}
+
+ul li a {
+    opacity: 0.5;
+}
+
+ul li a:hover { /* pseudo-class */
+    font-weight: bold;
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #1f1534;
+}
+
+main {
+    display: flex;
+    align-items: center; /* colocar na mesma linha altura) */
+    justify-content: space-between; /* cada item em um canto*/
+}
+
+h1 {
+    font-family: 'Mulish', sans-serif;
+    font-size: 49px;
+    line-height: 56px;
+    color: #1f1534;
+    font-weight: normal;
+    width: 490px;
+}
+
+h1 span {
+    color: #89c5cc;
+    font-weight: bold;
+}
+
+section p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #7d7987;
+    margin: 40px 0px;
+}
+
+button {
+    color: white;
+    text-transform: uppercase; /* todas as letras maiúsculas*/
+    font-family: 'Open Sans', sans-serif;
+
+    border-radius: 4px;
+    background: #69b99d;
+    border: none;
+    padding: 14px 32px 15px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    cursor: pointer; /* quando o mouse estiver encima, vai virar uma mão */
+}
+
+button:hover {
+    background: #4b8571;
+}
+
+footer {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#balls {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
 }
