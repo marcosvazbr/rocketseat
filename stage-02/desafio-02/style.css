@@ -12,14 +12,14 @@ body {
     width: 1008px;
     margin: 0 auto;
     padding-top: 65px;
+    
   }
   
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
-    margin-bottom: 15px;
+    margin-bottom: 55px;
   }
   
   ul {
