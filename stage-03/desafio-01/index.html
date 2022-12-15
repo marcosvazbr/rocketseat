@@ -20,7 +20,7 @@
     </div>
   </header>
 
-  <form action="get">
+  <form action="get" id="form">
     
 
     <fieldset class="grupos">
@@ -67,17 +67,17 @@
       <div class="campos-laterais">
 
         <div class="campos" id="data">
-          <input type="date" name="data-1" id="data-1" required >
+          <input class="no-aparencia" type="date" name="data-1" id="data-1" required >
           <label for="data-1">Data <span>(DD/MM/AAAA)</span></label>
         </div>
 
         <div class="campos" id="hora">
-          <input type="time" name="das-1" id="das-1" required >
+          <input class="no-aparencia" type="time" name="das-1" id="das-1" required >
           <label for="das-1">Das</label>
         </div>
 
         <div class="campos" id="hora">
-          <input type="time" name="ate-1" id="ate-1" required >
+          <input class="no-aparencia" type="time" name="ate-1" id="ate-1" required >
           <label for="ate-1">Até</label>
         </div>
 
@@ -106,9 +106,11 @@
 
     </fieldset>
 
-    
-
   </form>
   
+  <div id="footer">
+    <input form="form" type="submit" value="SALVAR">
+  </div>
+
 </body>
 </html>
