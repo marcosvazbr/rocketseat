@@ -1,12 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Criando Formulário 2</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <div id="cabecalho">
+      <h1>avalie a sua mentoria</h1>
+      <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+      <div id="balao">
+        
+        <div id="estrelas">
+          <img id="estrea-2" src="imagem/estrela-cheia.png" alt="estrela de avaliação marcada">
+          <img id="estrea-3" src="imagem/estrela-cheia.png" alt="estrela de avaliação marcada">
+          <img id="estrea-4" src="imagem/estrela-cheia.png" alt="estrela de avaliação marcada">
+          <img id="estrea-5" src="imagem/estrela-transparente.png" alt="Estrela de avaliação desmarcada">
+          <img id="estrea-6" src="imagem/estrela-transparente.png" alt="Estrela de avaliação desmarcada">
+
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <div class="form-header">
+    <h2>Informações pessoais</h2>
+  </div>
+
+  <form action="#">
+    
+    <fieldset>
+      <label id="inf-pessoais" for="pessoais">Informações pessoais</label>
+      
+      <div class="form-linha">
+        <div class="input">
+          <input type="text" name="nome" id="nome">
+          <label for="nome">nome</label>
+        </div>
+        <div class="input">
+          <input type="text" name="sobrenome" id="sobrenome">
+          <label for="sobrenome">Sobrenome</label>
+        </div>
+      </div>
+      <div class="form-coluna">
+        <div class="input">
+          <input type="email" name="email" id="email">
+          <label for="email">E-mail <span>(digite um email válido)</span></label>
+        </div>
+      </div>
+    </fieldset>
+
+      <h2>informações do mentor</h2>
+
+      <div class="form-coluna">
+        <div class="input">
+          <select name="mentor" id="mentor">
+            <option value="marcos">Marcos</option>
+            <option value="paulo">Paulo</option>
+            <option value="carlos">Carlos</option>
+          </select>
+          <label for="mentor">Selecione quem foi o seu mentor</label>
+        </div>
+      </div>
+
+      <div class="form-coluna">
+        <div class="input">
+          <textarea name="Feedback" id="Feedback" cols="30" rows="10"></textarea>
+          <label for="Feedback">Feedback sobre o mentor</label>
+        </div>
+      </div>
+
+      <div class="form-coluna">
+        <div class="input-checkbox">
+          <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-label">
+          <label class="checkbox" id="checkbox-label" for="checkbox-label">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+        </div>
+      </div>
+    
+
+    <fieldset>
+
+    </fieldset>
+
+
+  </form>
+
+  
   
 </body>
 </html>

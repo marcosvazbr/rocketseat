@@ -1,0 +1,226 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  background: #E5E5E5;
+
+  height: 2000px;
+}
+
+header {
+  background: #293241;
+  width: 100%;
+  height: 465px;
+}
+
+#cabecalho {
+  width: 750px;
+  margin: auto;
+  padding-top: 107px;
+  color: white;
+  text-align: center;
+}
+
+#balao {
+  background-image: url(imagem/balao.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  margin-bottom: 32px;
+  
+}
+#estrelas {
+  position: relative;
+  top: 30%;
+
+}
+
+header h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+
+.form-header {
+  display: flex;
+  position: absolute;
+  width: 750px;
+  height: 133px;
+  margin: 0px auto 30px;
+  top: 332px;
+  border-radius: 20px 20px 0px 0px;
+
+  background: #F67669;
+  height: 133px;
+
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  left: -50%;
+  right: -50%;
+  
+}
+
+.form-header > h2 {
+  color: white;
+
+  margin: none;
+  
+}
+
+h2 {
+  font-family: 'Staatliches', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+
+  color: #253B51;
+
+  text-align: center;
+
+  border-bottom: 1px solid #E6E6F0;
+}
+
+#inf-pessoais {
+  display: none;
+  
+}
+
+form {
+  display: block;
+  width: 622px;
+  margin: auto;
+  background: white;
+  padding: 31px 64px 178px 64px;
+}
+
+fieldset {
+  border: none;
+
+}
+
+.form-linha {
+  display: flex;
+  gap: 22px;
+
+}
+
+.form-linha, .form-coluna {
+  
+}
+
+.input, option, select {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #4E4958;
+
+}
+
+input, select {
+  height: 55px;
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+span {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+
+  color: #C1BCCC;
+}
+
+select {
+  padding: 18px;
+  width: 50%;
+  
+}
+
+textarea {
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.input-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #4E4958;
+  width: 100%;
+  gap: 8px;
+  margin-top: 15px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #4E4958;
+
+}
+
+input[type='checkbox'] {
+  display: none
+  
+}
+
+.checkbox {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.checkbox::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  
+  display: block;
+}
+
+.checkbox:checked + .checkbox::before {
+  background: red;
+}
