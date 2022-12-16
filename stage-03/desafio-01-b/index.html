@@ -45,7 +45,7 @@
       <div class="form-linha">
         <div class="input">
           <input type="text" name="nome" id="nome">
-          <label for="nome">nome</label>
+          <label for="nome">Nome</label>
         </div>
         <div class="input">
           <input type="text" name="sobrenome" id="sobrenome">
@@ -60,38 +60,60 @@
       </div>
     </fieldset>
 
-      <h2>informações do mentor</h2>
-
-      <div class="form-coluna">
-        <div class="input">
-          <select name="mentor" id="mentor">
-            <option value="marcos">Marcos</option>
-            <option value="paulo">Paulo</option>
-            <option value="carlos">Carlos</option>
-          </select>
-          <label for="mentor">Selecione quem foi o seu mentor</label>
+      <fieldset>
+        <h2>informações do mentor</h2>
+        <div class="form-coluna">
+          <div class="input">
+            <select name="mentor" id="mentor">
+              <option value="marcos">Marcos</option>
+              <option value="paulo">Paulo</option>
+              <option value="carlos">Carlos</option>
+            </select>
+            <label for="mentor">Selecione quem foi o seu mentor</label>
+          </div>
         </div>
-      </div>
-
-      <div class="form-coluna">
-        <div class="input">
-          <textarea name="Feedback" id="Feedback" cols="30" rows="10"></textarea>
-          <label for="Feedback">Feedback sobre o mentor</label>
+        <div class="form-coluna">
+          <div class="input">
+            <textarea name="Feedback" id="Feedback" cols="30" rows="10"></textarea>
+            <label for="Feedback">Feedback sobre o mentor</label>
+          </div>
         </div>
-      </div>
-
-      <div class="form-coluna">
-        <div class="input-checkbox">
-          <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-label">
-          <label class="checkbox" id="checkbox-label" for="checkbox-label">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+        <div class="form-coluna">
+          <div class="input-checkbox">
+            <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-label">
+            <label class="checkbox" id="checkbox-label" for="checkbox-label">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+          </div>
         </div>
-      </div>
+      </fieldset>
     
 
     <fieldset>
 
+      <h2>agendando próxima mentoria</h2>
+
+      <div class="form-linha">
+        <div class="input">
+          <input type="date" name="data" id="data">
+          <label for="data">Data <span>(DD/MM/AAAA)</span></label>
+        </div>
+        <div class="input">
+          <input type="time" name="time" id="time">
+          <label for="time">Das</label>
+        </div>
+        <div class="input">
+          <input type="time" name="time" id="time">
+          <label for="time">Até</label>
+        </div>
+      </div>
+      
+
     </fieldset>
 
+    <fieldset>
+      <div>
+        <input type="submit" value="Salvar">
+      </div>
+    </fieldset>
 
   </form>
 
