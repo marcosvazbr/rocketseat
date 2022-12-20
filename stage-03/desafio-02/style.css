@@ -45,36 +45,42 @@ header h1 {
 
 main {
   padding: 16px 32px 60px 32px;
-  width: 320px;
-  height: 1642px;
+  max-width: 320px;
+  height: 1650px;
 }
 
 main .grupo-imagem {
-  display: grid;
-  grid-template-areas: "A"
-  "B"
-  "B"
-  "C"
-  "D"
-  "D";
-  height: 250px;
+ 
+  object-fit: fill;
+  
+ 
 }
 
 .imagem img {
   width: 320px;
-  object-fit: ;
+  object-fit: none;
+
+
+}
+
+.grupo-imagem {
+  display: grid;
+  grid-template-rows: 250px 450px 250px 450px;
+}
+.imagem {
+  position: relative;
+  
+  
+}
+
+span {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: white;
+  border-radius: 10rem;
+  padding: 3px 10px 3px 10px;
+  font-size: 20px;
 }
 
 
-.grupo-imagem div:nth-child(1) {
-  grid-area: A;
-}
-.grupo-imagem div:nth-child(2) {
-  grid-area: B;
-}
-.grupo-imagem div:nth-child(3) {
-  grid-area: C;
-}
-.grupo-imagem div:nth-child(4) {
-  grid-area: D;
-}
