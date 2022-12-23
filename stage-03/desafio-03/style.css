@@ -10,6 +10,8 @@
 
 body {
   font-family: 'Palanquin', sans-serif;
+  font-size: 1.6rem;
+  max-width: 100vw;
 }
 
 h1 {
@@ -29,8 +31,10 @@ h1, span {
 
 header {
   background: #8E9AAF;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   place-items: center;
+  animation: toptodown 900ms  0s ease backwards;
   
 }
 
@@ -46,6 +50,10 @@ header {
   padding: 3.2rem 0;
 }
 
+#logo-desktop {
+  display: none;
+}
+
 .subtexto {
   display: none;
 }
@@ -55,6 +63,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 1.8rem 3.2rem 6rem;
+  max-width: 100vw;
  
 }
 
@@ -70,16 +79,15 @@ main {
 }
 
 .cards {
+  position: relative;
   display: grid;
   gap: 3.2rem;
   margin-top: 5rem;
-
 }
 
-.cards .card {
+.card {
   position: relative;
-  width: 32rem;
-  height: fit-content;
+  animation: downtoup 700ms 200ms ease backwards;
 }
 
 .cards .card span {
@@ -92,35 +100,68 @@ main {
   color: #4A4E69;
   padding: 0.5rem 1rem;
   text-align: center;
-  width: 11.2rem;
+  width: 10rem;
   letter-spacing: 0.2rem;
 }
 
 .cards .card img {
-  object-fit: cover;
-  width: 100%;
-  border-radius: 2rem;
+  max-width: 100%;
+  border-radius: 2rem; 
 }
 
-@media (min-width: 800px) {
+.cards .card:hover {
+  transform: scale(1.03);
+  transition-duration: 400ms; 
+  cursor: pointer;
+}
+
+footer p {
+  display: none;
+}
+
+.cards .card:nth-child(5) {
+  display: none;
+}
+
+.cards .card:nth-child(6) {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  #logo {
+    display: none;
+  }
+  
+  #logo-desktop {
+    display: inline;
+    padding: 3.2rem 0;
+  }
+  
+  
   .texto {
     display: none;
   }
 
   .subtexto {
     display: block;
+    width: 27.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: white;
   }
 
-  .container {
-    display: flex;
-  }
 
   header {
-    max-width: 37.7rem;
+    position: fixed;
+    width: 37.7rem;
     height: 100vh;
+    animation: lefttoright 1200ms 0ms ease backwards;
   }
 
   .cards {
+    margin-left: 37.7rem;
     grid-template-areas: 
     'A B C'
     'D B E'
@@ -128,27 +169,95 @@ main {
     
   }
 
+  .card {
+    animation: none;
+  }
+
   .card:nth-child(1) {
     grid-area: A;
+    animation: downtoup 700ms 250ms ease backwards;
   }
 
   .card:nth-child(2) {
     grid-area: B;
+    animation: downtoup 700ms 300ms ease backwards;
   }
 
   .card:nth-child(3) {
     grid-area: C;
+    animation: downtoup 700ms 250ms ease backwards;
   }
 
   .card:nth-child(4) {
     grid-area: D;
+    animation: downtoup 700ms 450ms ease backwards;
   }
 
-  .card:nth-child(6) {
+  .cards .card:nth-child(6) {
     grid-area: E;
+    display: inline;
+    animation: downtoup 700ms 450ms ease backwards;
   }
 
-  .card:nth-child(5) {
+  .cards .card:nth-child(5) {
     grid-area: F;
+    display: block;
+    animation: downtoup 700ms 600ms ease backwards;
+  }
+
+  footer p {
+
+    display: block;
+    text-align: center;
+    margin-left: 37.7rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    color: #4A4E69;
+
+    margin-top: 5rem;
+    ;
+  }
+
+  footer p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4A4E69;
+    font-size: 1.4rem;
+
+  }
+}
+
+@keyframes downtoup {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lefttoright {
+  from {
+    opacity: 0;
+    transform: translatex(-250px);
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+@keyframes toptodown {
+  from {
+    opacity: 0;
+    transform: translatey(-100px);
+    
+  }
+  to {
+    opacity: 1;
+    transform: translatex(0);
+    
   }
 }
