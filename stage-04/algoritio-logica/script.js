@@ -1,36 +1,55 @@
-// duas barras para comentário em linha ou 
-/* barra asteristico para comentarios multi-linhas
+/*
+
+  Capturar 2 números e fazer as operações matemáticas de soma, subtraçã, multiplicação, divisão e resto da divisão.
+
+  Melhorar a lógica de programação
+
+    -Fazer Perguntas corretas
+    -Entender o problema
+  Operadores matemáticos
+  
+*/
+//Minha tentativa
+
+/*
+
+let numberOne = prompt("Digite o primeiro número:")
+let numberTwo = prompt("Digite o segundo número:")
+
+alert("Resultado da soma é: " + (Number(numberOne) + Number(numberTwo)))
+
+alert("Resultado da subtração é: " + (Number(numberOne) - Number(numberTwo)))
+
+alert("Resultado da multiplicação é: " + (Number(numberOne) * Number(numberTwo)))
+ 
+alert("resultado da divisão é: " + (Number(numberOne) / Number(numberTwo)))
+
+alert("Resultado do resto da divisão é: " + (Number(numberOne) % Number(numberTwo)))
 
 */
-/* como resolver problemas na linguagem de programação?
 
-Como melhorar minha lógica de programação?
+// Com a aula
 
-  1 identifique o que já sabe e faça.
-  2 quebre o grande problema em passos menores.
+let firstNumber = prompt("Digite o primeiro número:")
+let secondNumber = prompt("Digite o segundo número:")
 
+// reatribuir a variável o valor como number, para não ter que fazer em cada alert
 
-O que estou aprendendo de JavaScript
-  1 executar funções
-  2 Variáveis 
-    2.1 É recomendavel usar o let no lugar do var
-  3 Concatenação (usa o + para juntar o conteúdo da string)
-  4 String = cadeia de caracteres (um texto)
+firstNumber = Number(firstNumber)
+secondNumber = Number(secondNumber)
 
+// agora minhas variáveis não são mais string, mas sim number
 
-Pergunte o nome do usuário e escreva a mensagem:
-"Olá, [nome do usuário]"
+// usando a variável const, pois não irei mudala.(esta variável não pode ser trocada como a let e a var)
 
-*/
+const sum = firstNumber + secondNumber
+const sub = firstNumber - secondNumber
+const multi = firstNumber * secondNumber
+const div = firstNumber / secondNumber
+const restDiv = firstNumber % secondNumber
 
-let nome = prompt("Qual o seu nome?")
-let item = prompt("Qual item gostaria de lavar?")
-alert("Olá, " + nome + ", você gostaria de lavar " + item + " correto?")
-let resp = prompt("Sim ou Não")
-
-if(resp == "sim") {
-  alert("Sua " + item + " será lavada")
-} else {
-  alert("Tente novamente.")
-}
-
+alert('soma: ' + sum)
+alert('Subtração: ' + sub)
+alert('Multiplicação: ' + multi)
+alert('Divisão: ' + div)
+alert('Resto da divisão: ' + restDiv)
