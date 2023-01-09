@@ -48,7 +48,11 @@ while (options != 4) {
 
       if (namePosition >= 0){
       let average = sum(students[namePosition].noteOne, students[namePosition].noteTwo)
-      alert(`Estudante ${students[namePosition].name} tem media de ${average}`)
+        if (average >= 7) {
+          alert(`Estudante ${students[namePosition].name} tem media de ${average} e foi aprovado`)
+        } else {
+          alert(`Estudante ${students[namePosition].name} tem media de ${average} e não foi aprovado`)
+        }
       } else {
         alert("Estudante não localizado")
       }
@@ -59,7 +63,11 @@ while (options != 4) {
 
       for (let i = 0; i < students.length; i++) {
         let average = sum(students[i].noteOne, students[i].noteTwo)
-        alert(`Estudante ${students[i].name} tem media de ${average}`)
+        if (average >= 7) { 
+          alert(`Estudante ${students[i].name} tem media de ${average} e foi aprovado.`)
+        } else {
+          alert(`Estudante ${students[i].name} tem media de ${average} e não foi aprovado.`)
+        }
       }
 
       break
