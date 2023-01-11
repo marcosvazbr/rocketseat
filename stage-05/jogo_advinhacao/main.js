@@ -1,22 +1,46 @@
+//Variáveis
 let randomNumber = Math.round(Math.random() * 10)
-console.log(randomNumber)
-
+const screen1 = document.querySelector(".screen1")
+const screen2 = document.querySelector(".screen2")
 let xAttempts = 1
+const btnTry = document.querySelector("#btnTry")
+const btnReset = document.querySelector("#btnReset")
 
-function handleClick(event) {
-  event.preventDefault()
+//Eventos
+btnTry.addEventListener('click', handleTryClick)
+btnReset.addEventListener('click', handleResetClick) 
+
+//Funções
+function handleTryClick(event) {
+
+  event.preventDefault() // não faça o padrão (o padrão é enviar o formulário, nesta linha fala para não enviar)
 
   const inputNumber = document.querySelector("#inputNumber")
-  console.log(inputNumber.value) // para pegar o valor dentro do input, o conteúdo que foi digitado pelo usuário, usa-se .value
 
+if((Number(inputNumber.value) >= 0) && (Number(inputNumber.value) <= 10)) {
+  
   if(Number(inputNumber.value) == randomNumber) {
-    document.querySelector(".screen1").classList.add("hide")
-    document.querySelector(".screen2").classList.remove("hide")
-    document.querySelector(".screen2 h2").innerText = `Acertou em ${xAttempts} tentativas.`
+    reverseHide()
+    screen2.querySelector("h2").innerText = `Acertou em ${xAttempts} tentativas.`
   }
   xAttempts++
-  console.log(xAttempts)
-
+  
+  inputNumber.value = ""
+  
+} else {
+  alert(`O numero ${Number(inputNumber.value)} não é válido, tente novamente `)
+}
 }
 
 
+function handleResetClick() {
+  reverseHide()
+  xAttempts = 1
+  randomNumber = Math.round(Math.random() * 10)
+  inputNumber.value = ""
+}
+
+function reverseHide() {
+  screen1.classList.toggle('hide')
+  screen2.classList.toggle('hide')
+}
